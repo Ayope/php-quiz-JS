@@ -1,49 +1,82 @@
-@mixin flexCenter {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+@mixin flexCenter{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 
-.steps{
-    display: flex;
-    justify-content: center;
+body{
+    display: grid;
+    background-color: #FFFF00;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+@import './stepper';
+
+main{
+    .logo{
+    @include flexCenter();
     width: 100%;
+    min-width: 100px;
+}
+}
 
-    .stepsList{
-        list-style-type: none;
-        display: flex;
-
-        .stepsListItems{
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            min-width : 170px;
-
-            .progressCount{
-                height: 40px;
-                width: 40px;
-                @include flexCenter();
-                border-radius: 50%;
-                font-weight: 600;
-                margin: 0 auto;
-                position: relative;
-                z-index: 10;
-            }
-        }
-
-            .stepsListItems + .stepsListItems::after{
-                content:"";
-                position: absolute;
-                left: 0;
-                top: 19px;
-                background-color: black;
-                width: 100%;
-                height: 2px;
-                transform: translateX(-50%);
-                z-index: -10;
-            }
+main{
+    .rules{
+        @include flexCenter();
+        width: 100%;
+        min-width: 100px;
     }
 }
 
+main .start{
+    @include flexCenter();
+    .startButton{
+        background-color: #ccc;
+        height: 30px;
+        width: 100px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5%;
+    }
+}
+
+main {
+    margin-top: 20px;
+    .question{
+        @include flexCenter();
+        width: 50%;
+        margin: auto;
+        h4{
+            height: 0px;
+        }
+        p{
+            text-align : justify;
+        }
+        @media(max-width: 768px){
+            width: 80%;
+        }
+    }
+    .answers{
+        padding-top: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
+        margin: auto;
+        .answer{
+            cursor: pointer;
+            background-color: #ccc;
+            width: 450px;
+            margin: 1em 0;
+            padding: 1em;
+            text-align: center;
+        }
+    }
+    
+}

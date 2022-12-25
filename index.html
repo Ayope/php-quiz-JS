@@ -5,23 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
-    <section class="steps">
-        <ul class="stepsList">
-            <li class="stepsListItems">
-                <span class="progressCount">1</span>
-                <span class="progressLabel">Informations</span>
-            </li>
-            <li class="stepsListItems">
-                <span class="progressCount">2</span>
-                <span class="progressLabel">Questionnaire</span>
-            </li>
-            <li class="stepsListItems">
-                <span class="progressCount">3</span>
-                <span class="progressLabel">Résultat</span>
-            </li>
-        </ul>
-    </section>
+    <header >
+        <div class="stepper-wrapper">
+            <div class="stepper-item active">
+                <div class="step-counter">1</div>
+                <div class="step-name">Informations</div>
+            </div>
+            <div class="stepper-item">
+                <div class="step-counter">2</div>
+                <div class="step-name">Questionnaire</div>
+            </div>
+            <div class="stepper-item">
+                <div class="step-counter">3</div>
+                <div class="step-name">Résultat</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="logo">
+            <i class="uil uil-star" style="font-size: 200px; height: 180px"></i>
+            <h1 >PHP Quiz</h1>
+        </div>    
+        
+        <hr>
+
+        <div class="rules">
+            <h2 style="margin-bottom: 0px;">Rules:</h2>
+            <ul>
+                <li>Don't cheat!</li>
+                <li>Don't cheat!</li>
+                <li>Don't cheat!</li>
+            </ul>    
+        </div>
+        
+        <div class="start">
+            <a href="./page.html">
+                <button class="startButton" onclick="checkProg()">
+                    START
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <style src="./assets/js/main.js"></style>
 </body>
 </html>
