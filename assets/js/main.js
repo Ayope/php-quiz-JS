@@ -13,9 +13,12 @@ var scorePart = document.querySelector('#score1');
 
 var scoreNum = document.querySelector('#scoreNum');
 
+const options = document.querySelector(".answers") ;
+
+var progBar = document.getElementById("progessBar");
+
 let que_count = 0;
 var score = 0;
-const options = document.querySelector(".answers") ;
 
 function shuffle(array){
     for(var i = array.length-1 ; i>0; i--){
@@ -55,8 +58,10 @@ function next(answer){
             if(questions[que_count].answer == value){
                 score++;
                 answer.style.backgroundColor = 'green' ;
+                checkBulletProgbar('correct');
             }else{
                 answer.style.backgroundColor = 'red' ; 
+                checkBulletProgbar('wrong');
             }
         
             for(let i = 0; i < options.children.length; i++){
@@ -73,6 +78,8 @@ function next(answer){
                 scorePart.style.display = 'flex';
         
                 scoreNum.innerHTML = '<h2>'+(score/10)*100+'%</h2>'
+
+                progBar.style.display = 'none';
             }, 1500)
 
    
@@ -81,8 +88,10 @@ function next(answer){
             if(questions[que_count].answer == value){
                 score++;
                 answer.style.backgroundColor = 'green' ;
+                checkBulletProgbar('correct');
             }else{
                 answer.style.backgroundColor = 'red' ; 
+                checkBulletProgbar('wrong');
             }
         
             for(let i = 0; i < options.children.length; i++){
@@ -98,4 +107,17 @@ function next(answer){
 
 function repeat(){
     location.reload();
+}
+
+function addBulletProgbar(){
+    for(let i = 0; i<questions.length; i++){
+        let bullet = '<span class="circle"></span>'
+        progBar.innerHTML += bullet;
+    }
+}
+
+addBulletProgbar();
+
+function checkBulletProgbar(marktype){
+    progBar.children[que_count].classList.add(marktype);
 }

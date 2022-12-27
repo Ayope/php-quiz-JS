@@ -185,4 +185,36 @@ main .answers .disable {
   cursor: pointer;
   border: none;
   border-radius: 5%;
+}
+
+.prog-bar {
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 100px;
+}
+@media (max-width: 425px) {
+  .prog-bar {
+    margin-top: 50%;
+  }
+}
+
+.circle {
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.circle.correct {
+  background-color: #2ee01e;
+  content: url(./../images/done.png);
+}
+
+.circle.wrong {
+  background-color: #EA4444;
+  content: url(./../images/wrong.png);
 }/*# sourceMappingURL=style.css.map */
