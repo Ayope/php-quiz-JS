@@ -27,6 +27,9 @@ body {
     font-size: 12px;
   }
 }
+.stepper-item .step-name {
+  color: #ccc;
+}
 
 .stepper-item::before {
   position: absolute;
@@ -64,10 +67,15 @@ body {
 
 .stepper-item.active {
   font-weight: bold;
+  color: #ccc;
 }
 
 .stepper-item.completed .step-counter {
   background-color: #282120;
+}
+
+.stepper-item.completed .step-name {
+  color: #282120;
 }
 
 .stepper-item.completed::after {
@@ -158,4 +166,23 @@ main .answers .answer {
   margin: 1em 0;
   padding: 1em;
   text-align: center;
+}
+main .answers .disable {
+  pointer-events: none;
+}
+
+.score1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.score1 .retryButton {
+  background-color: #ccc;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5%;
 }/*# sourceMappingURL=style.css.map */

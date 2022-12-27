@@ -16,6 +16,10 @@
     @media (max-width: 768px) {
       font-size: 12px;
     }
+
+    .step-name{
+        color: #ccc;
+    }
 }
 
 .stepper-item::before {
@@ -54,10 +58,15 @@
 
 .stepper-item.active {
     font-weight: bold;
+    color: #ccc;
 }
 
 .stepper-item.completed .step-counter {
     background-color: #282120;
+}
+
+.stepper-item.completed .step-name {
+    color: #282120;
 }
 
 .stepper-item.completed::after {
