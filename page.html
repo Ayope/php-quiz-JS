@@ -12,6 +12,7 @@
     </div>
 
     <header>
+
     <div class="stepper-wrapper">
         <div class="stepper-item completed">
             <div class="step-counter">1</div>
@@ -29,20 +30,29 @@
     </header>
 
     <main id="main" >
+        
+        <div class="position">
+            <div class="border">
+                <div class="timer" id="timer">
+                    
+                </div>
+            </div>
+        </div>
 
         <div class="question" id="question">
             <h4>Question <span id="questNum"></span></h4>
             <p id="quest"></p>
         </div>
 
-        <hr style="width:60%; background-color: rgb(152, 148, 148); height: 1px; border: none;">
+        <hr style="width:60%; background-color: #ccc; height: 1px; border: none;">
 
         <div class="answers">
             <div class="answer" value="1" id="ans1" onclick="next(this);"></div>
             <div class="answer" value="2" id="ans2" onclick="next(this);"></div>
             <div class="answer" value="3" id="ans3" onclick="next(this);"></div>
             <div class="answer" value="4" id="ans4" onclick="next(this);"></div>
-        </div>  
+        </div> 
+
     </main>
 
     <div class="score1" id="score1">

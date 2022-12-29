@@ -10,13 +10,14 @@
 
 body{
     display: grid;
-    background-color: #FFFF00;
+    background-color: #b550f9;
     margin: 0px;
     padding: 0px;
     font-family: 'Inter', sans-serif;
 }
 
 @import './stepper';
+@import './timer';
 
 main{
     .logo{
